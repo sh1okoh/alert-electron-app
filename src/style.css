@@ -1,0 +1,10 @@
+body {
+  background: red;
+}
+.alertMessage {
+  position: absolute;
+  color: white;
+  font-size: 100px;
+  top: 40%;
+  left: 50;
+}

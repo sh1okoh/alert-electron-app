@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Electron Read us</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 id="alertMessage" class="alertMessage"></h1>
+    <script>
+    function clock() {
+      const time = new Date(); 
+      const hou = ('0' + String( time.getHours() )).slice(-2);
+      const min = ('0' + String( time.getMinutes() )).slice(-2);
+      const sec = ('0' + String( time.getSeconds() )).slice(-2);
+      document.getElementById("clock").innerHTML = hou+"時"+min+"分"+sec+"秒";
+    }
+    function showAlertMessage() {
+      let cnt = 0
+      let res = ""
+      const messageArr = ['M', 'T', 'G', 'の', '時', '間', 'だ', 'よ', '( ^ω^ )']
+      const alert = setInterval(
+        function() {
+          res += messageArr[cnt]
+          document.getElementById("alertMessage").innerHTML = res
+          cnt += 1
+          if (cnt == messageArr.length) {
+            clearInterval(alert)
+          }
+        },
+        300
+      )
+    }
+    setInterval('clock()', 500);
+    showAlertMessage();
+    </script>
+  </body>
+</html>

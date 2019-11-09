@@ -1,0 +1,14 @@
+{
+  "name": "sampleelectronapp",
+  "version": "1.0.0",
+  "description": "sample electron app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Koki Shiozawa <kooooo.0719task@gmail.com> (https://sh1okoh.hatenablog.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^7.1.1"
+  }
+}
